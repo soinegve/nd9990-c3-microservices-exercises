@@ -23,7 +23,7 @@ script:
   - docker tag udagram-frontend karolose/udagram-frontend:latest
 
 after_success:
-  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
   - docker push karolose/udagram-api-user
   - docker push karolose/udagram-api-feed
   - docker push karolose/udagram-frontend
