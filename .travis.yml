@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 12å
+  - 12
 
 services:
   - docker
@@ -23,7 +23,7 @@ script:
   - docker tag udagram-frontend karolose/udagram-frontend:latest
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - docker push karolose/udagram-api-user
   - docker push karolose/udagram-api-feed
   - docker push karolose/udagram-frontend
