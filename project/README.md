@@ -20,6 +20,21 @@ We do _not_ want your credentials to be stored in git. After pulling this `start
 
 Afterwards, we can prevent the file from being included in your solution by adding the file to our `.gitignore` file.
 
+curl --data {"email":"hello@gmail.com","password":"fancypass"} localhost:8080/api/v0/users/auth
+
+curl --verbose --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"email":"hello@gmail.com","password":"fancypass"}' \
+  localhost:8080/api/v0/users/auth
+
+
+
+
+curl --verbose --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"email":"hello@gmail.com","password":"fancypass"}' \
+  localhost:8080/api/v0/users/auth
+
 ### Database
 Create a PostgreSQL database either locally or on AWS RDS. Set the config values for environment variables prefixed with `POSTGRES_` in `set_env.sh`.
 
