@@ -1,0 +1,1 @@
+aws eks update-kubeconfig --name kudagrama --region us-east-2 --role-arn arn:aws:iam::315196293233:role/eks-role-3

@@ -1,1 +1,2 @@
 project/set_env.sh
+project/k8sconfigs/env-config.yml
