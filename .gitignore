@@ -1,2 +1,4 @@
 project/set_env.sh
 project/k8sconfigs/env-config.yml
+project/k8sconfigs/secrets.yaml
+project/k8sconfigs/secrets.yml
