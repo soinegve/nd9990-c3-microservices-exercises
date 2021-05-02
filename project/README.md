@@ -20,33 +20,7 @@ We do _not_ want your credentials to be stored in git. After pulling this `start
 
 Afterwards, we can prevent the file from being included in your solution by adding the file to our `.gitignore` file.
 
-curl --data {"email":"hello@gmail.com","password":"fancypass"} localhost:8080/api/v0/users/auth
 
-curl --verbose --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"email":"hello@gmail.com","password":"fancypass"}' \
-  localhost:8080/api/v0/users/auth
-
-curl --verbose --header 'Content-Type: application/json' --data '{"email":"ena@ena.com","password":"ena"}' http://aed988df43b594c18aeaa5adf6d5a977-294515071.us-east-2.elb.amazonaws.com/api/v0/users/auth/
-
-
-
-curl --verbose --header 'Content-Type: application/json' --data '{"email":"dio@dio.com","password":"dio"}' http://aed988df43b594c18aeaa5adf6d5a977-294515071.us-east-2.elb.amazonaws.com:8080/api/v0/users/auth/
-
-curl 'http://aed988df43b594c18aeaa5adf6d5a977-294515071.us-east-2.elb.amazonaws.com:8080/api/v0/users/auth/' \
-  -H 'Accept: application/json, text/plain, */*' \
-  -H 'Referer: http://a2cedf04ad37c4a3795de54e541a318e-1157947348.us-east-2.elb.amazonaws.com/' \
-  -H 'DNT: 1' \
-  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
-  -H 'Content-Type: application/json' \
-  --data-raw '{"email":"dio@dio.com","password":"dio"}' \
-  --compressed
-
-
-curl --verbose --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"email":"hello@gmail.com","password":"fancypass"}' \
-  localhost:8080/api/v0/users/auth
 
 ### Database
 Create a PostgreSQL database either locally or on AWS RDS. Set the config values for environment variables prefixed with `POSTGRES_` in `set_env.sh`.
